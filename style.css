@@ -1,0 +1,492 @@
+
+.carousel {
+    height: 90vh;
+    z-index: 1;
+}
+
+.carousel-item > img {
+    height: 90vh;
+    width: 100vw;
+    object-fit: cover;
+    filter: grayscale(0.4) brightness(0.7);
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+    
+}
+
+.navbar {
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 1) !important;
+    transition: background-color 0.4s ease-in-out;
+    height: 10vh; 
+    font-family: 'Kanit', sans-serif;
+}
+
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+  }
+
+.navbar-anim {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.navbar-brand {
+    text-decoration: none;
+    color:rgba(245, 245, 245, 0.941);
+    font-size: 20pt;
+    
+    background: -webkit-linear-gradient(#fbfbfb, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.top-car{
+    z-index: 10;
+    position: absolute;
+    left: 10%;
+    top: 27%;
+    width: 70vw;
+    
+}
+
+.giulia {
+    font-size: 60pt;
+    font-family: 'Paytone One', sans-serif;
+    background: -webkit-linear-gradient(#ff9696, #ffe89e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+
+}
+
+.desc {
+    font-family: 'Nunito', sans-serif;
+    color: rgba(255, 255, 255, 0.816);
+    font-size: 20pt;
+    box-sizing: border-box;
+
+}
+
+@media (max-width: 450px) {
+    .top-car{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .desc{
+        font-size:15pt;
+    }
+    .giulia{
+        font-size:33pt;
+    }
+
+    .navbar-brand {
+        font-size: 15pt;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .top-car{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .desc{
+        font-size:15pt;
+    }
+    .giulia{
+        font-size:33pt;
+    }
+
+    .navbar-brand {
+        font-size: 15pt;
+    }
+  }
+
+
+  .btn-custom {
+    font-size: 1.5em; /* Imposta la dimensione del testo del pulsante */
+    border-color: #fc6060; /* Imposta il colore di sfondo del pulsante */
+    color: #ffffff; /* Imposta il colore del testo del pulsante */
+    border-radius: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .btn:hover{
+    font-size: 1.5em; /* Imposta la dimensione del testo del pulsante */
+    background-color: #fc6060;
+    border-color: #fc6060; /* Imposta il colore di sfondo del pulsante */
+    color: #ffffff; /* Imposta il colore del testo del pulsante */
+  }
+
+  .btn:focus{
+    font-size: 1.5em; /* Imposta la dimensione del testo del pulsante */
+    background-color: #fc6060;
+    border-color: #fc6060; /* Imposta il colore di sfondo del pulsante */
+    color: #ffffff; /* Imposta il colore del testo del pulsante */
+  }
+
+  .btn:focus, .btn:active, .btn:visited{
+    outline: none !important;
+    background-color: #fc6060 !important;
+    border-color: #fc6060 !important;
+    box-shadow: none !important;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 33.3%;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  
+  .column img {
+   
+    vertical-align: middle;
+    width: 100%;
+    filter: grayscale(0.2) brightness(0.8);
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .column img:hover {
+    filter: grayscale(0);
+  }
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+    .column img {
+      filter: grayscale(0) brightness(1);
+    }
+  }
+  
+  .menu{
+    text-align: center;
+  }
+
+  .image {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  /* Animazione di dissolvenza durante il filtraggio */
+  .image.fade-out {
+    opacity: 0;
+  }
+
+  /* external css: flickity.css */
+
+
+
+.carousel-bottom {
+
+  filter: grayscale(0.3) brightness(0.9);
+  overflow:auto; 
+
+  width: 100vw;
+  overflow-x: hidden;
+
+
+}
+
+.carousel-cell {
+  width:auto;
+  height: 40vh;
+
+  background: #8C8;
+
+
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+  
+}
+
+.flickity-viewport {
+    border: none !important;
+}
+
+.follow {
+    font-size: 34pt;
+    margin-bottom: 15px;
+    
+}
+.link-insta{
+    color:black;
+    
+}
+.link-insta:hover{
+    color:rgba(252, 96, 96, 0.9)!important;
+}
+
+.div-insta{
+    text-align: center;
+    font-size: 20pt;
+    padding-top: 0;
+    line-height: 50px;
+    margin-bottom: 50px;
+}
+
+a { 
+    text-decoration: none !important;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.image-box {
+    margin-bottom: 10px !important;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.image-box img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+
+.image-box:hover img {
+    transform: scale(1.2);
+}
+
+
+.image-box i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 40pt;
+  }
+  
+  .image-box:hover i {
+    opacity: 1;
+  }
+  
+  .fa-instagram:hover {
+    color:white !important;
+  }
+  
+
+.image-box2 {
+    margin-bottom: 10px !important;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.image-box2 img {
+    transition: all 0.3s;
+    display: block;
+    transform: scale(1);
+}
+
+.image-box2:hover img {
+    transform: scale(1.2);
+}
+
+.insta-rosso {
+    float: left;
+       position: absolute;
+       left: 0px;
+       top: 0px;
+       z-index: 1000;
+       padding: 5px;
+       color: #FFFFFF;
+       font-weight: bold;
+       height: 100%;
+       width: 100%;
+}
+
+.insta-rosso:hover {
+    background-color: rgba(252, 96, 96, 0.9);
+    transition-duration: 300ms;
+}
+
+.insta-rosso i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 40pt;
+}
+
+.insta-rosso:hover i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    font-size: 40pt;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  .modal-target {
+    width: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .modal-target:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    opacity: 1 !important;
+    max-width: 500px;
+  }
+  
+  /* Caption of Modal Image */
+  .modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+    margin-top: 32px;
+  }
+  
+  /* Add Animation */
+  .modal-content, .modal-caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-atransform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .modal-close:hover,
+  .modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @keyframes navbar-opacity { 
+    0% {
+      opacity: 0.7;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+.delay05 {
+    animation-delay: 0.5s ;
+}
+
+
+.gallery-title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 15px;
+    border: ;
+    
+}
+
+.fa-camera {
+    color: #fc6060 !important;
+}
