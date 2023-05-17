@@ -176,6 +176,7 @@ body {
       flex: 50%;
       max-width: 50%;
     }
+    
   }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -187,6 +188,7 @@ body {
     .column img {
       filter: grayscale(0) brightness(1);
     }
+
   }
   
   .menu{
@@ -246,8 +248,26 @@ body {
 .follow {
     font-size: 34pt;
     margin-bottom: 15px;
-    
 }
+
+@media screen and (max-width: 490px) { 
+
+    .follow {
+        font-size: 25pt;
+    }
+
+  }
+
+  @media screen and (max-width: 390px) { 
+
+    .follow {
+        font-size: 18pt;
+    }
+
+  } 
+
+
+
 .link-insta{
     color:black;
     
@@ -479,13 +499,29 @@ a {
 
 
 .gallery-title {
-    font-size: 30px;
+    font-size: 30pt;
     text-align: center;
     font-weight: bold;
     padding-top: 15px;
     border: ;
     
 }
+
+@media screen and (max-width: 780px) { 
+
+    .gallery-title {
+        font-size: 25pt;
+    }
+
+  }
+
+  @media screen and (max-width: 390px) { 
+
+    .gallery-title {
+        font-size: 18pt;
+    }
+
+  } 
 
 .fa-camera {
     color: #fc6060 !important;
