@@ -14,5 +14,4 @@ function myFunction() {
   } else {
     navbar.classList.remove("navbar-anim");
   }
-  console.log(window.pageYOffset);
 }

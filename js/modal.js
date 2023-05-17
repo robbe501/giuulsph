@@ -28,7 +28,6 @@ if (e.target.className.indexOf('fa-solid') !== -1) {
 }
 console.log(e.target.className);
 if (e.target.className === 'modal') {
-    console.log('entrato');
     modal.style.display = "none";
 }
 });
