@@ -1,4 +1,3 @@
-
 .carousel {
     height: 90vh;
     z-index: 1;
@@ -230,6 +229,7 @@ body {
 .carousel-cell {
   width:auto;
   height: 40vh;
+
 
   background: #8C8;
 
