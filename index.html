@@ -17,6 +17,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var phrases = [
+          "Attraverso l'obiettivo della mia macchina fotografica, catturo l'essenza di momenti unici, trasformando il tempo in immagini senza tempo.",
+          "La fotografia è il linguaggio con cui racconto le storie che il cuore non riesce a esprimere.",
+          "Scatto istanti, congelando emozioni e rendendole eternamente visibili.",
+          "Attraverso l'arte della fotografia, immergo lo sguardo nel mondo e lo restituisco con una nuova prospettiva.",
+          "Le mie fotografie parlano più di mille parole, rivelando la bellezza celata nelle cose più semplici.",
+          "Ogni scatto è un viaggio, un modo per esplorare l'infinite sfumature della vita attraverso gli occhi dell'obiettivo.",
+          "Nel mio mondo fotografico, l'immagine è il mezzo attraverso cui trasmettere l'anima di ciò che osservo.",
+          "Le mie fotografie catturano l'essenza della realtà e la trasformano in un'opera d'arte visiva.",
+          "Attraverso la lente della mia macchina fotografica, trasformo momenti fugaci in ricordi eterni.",
+          "La fotografia è il mio modo di raccontare storie senza bisogno di parole, facendo parlare le immagini.",
+          "Attraverso la mia passione per la fotografia, esprimo un universo di emozioni e storie senza confini, mentre seguo il mio cammino di scoperta e creatività."
+        ];
+  
+        var randomIndex = Math.floor(Math.random() * phrases.length);
+        var randomPhrase = phrases[randomIndex];
+        document.querySelector("#random-phrase p").textContent = randomPhrase;
+      });
+    </script>
     <nav class="navbar sticky navbar-anim" id="navbar">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">&nbsp&nbsp
@@ -52,7 +73,9 @@
         sono Giulia<br>
         </p>
         <br>
-        <p class="desc animate__animated animate__bounceInUp delay05">Attraverso la mia passione per la fotografia, esprimo un universo di emozioni e storie senza confini, mentre seguo il mio cammino di scoperta e creatività.</p><br><br>
+        <div id="random-phrase">
+          <p class="desc animate__animated animate__bounceInUp delay05">Attraverso la mia passione per la fotografia, esprimo un universo di emozioni e storie senza confini, mentre seguo il mio cammino di scoperta e creatività.</p><br>
+        </div>
         <a href="https://www.instagram.com/m/giuulsph" target=”_blank” type="button" class="btn btn-outline-primary btn-custom shadow-none animate__animated animate__bounceInUp animate__delay-1s">Contattami</a>
       </div><br>
       <div class="container">
